@@ -1,0 +1,20 @@
+version: '3.2'
+services:
+  davis-eval:
+    image: davis-eval
+    volumes:
+      - type: bind
+        target: /usr/src/app/data/DAVIS/
+        source: K:/datasets/DAVIS/DAVIS2017/
+        read_only: true
+      - type: bind
+        target: /workspace/results
+        source: K:/results-davis2017/
+        read_only: false
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: [ '0' ]
+              capabilities: [ gpu ]

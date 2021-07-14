@@ -1,0 +1,3 @@
+python python/tools/eval.py -i /workspace/results/davis2017-swin-t/ -o /workspace/results/davis2017-swin-t/results-mo.yml --year 2017 --phase val
+
+python python/tools/eval.py -i /workspace/results/dino-vit-b16-fixed/ -o /workspace/results/dino-vit-b16-fixed/results-mo.yml --year 2017 --phase val
